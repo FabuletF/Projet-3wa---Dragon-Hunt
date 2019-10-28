@@ -1,0 +1,33 @@
+<main>
+	<div class="blocInscrCnx">
+
+		<h1>Inscription à l'Aventure</h1>
+
+		<form class="monFormulaire degrade"  action="inscription.php" method="POST">
+
+			<fieldset>
+				<legend><i class="fa fa-envelope-o" aria-hidden="true"></i>Pour garder une trace de toutes vos victoires </legend>
+				<ul class="champs_form">
+					<li class="elts_form">
+						<label for="login">Login :</label>
+						<input id="login" type="text" name="login" maxlength="100" value ="<?= $hisLogin ?>" required>
+						
+						<label for="pass">Mot de passe :</label>
+						<input id="pass" type="password" name="pass" maxlength="100"  required>
+						
+						<label for="pass_confirm">Confirmation du mot de passe :</label>
+						<input id="pass_confirm" type="password" name="pass_confirm" maxlength="100"  required>
+					</li>
+					<li class="boutons_choix">
+						<input class="nextButton formButton" type="submit" name="inscription" value="Inscription">
+						<a  href="./"><button type="button" class="nextButton formButton">Annuler</button></a>
+					</li>
+				</ul>
+			</fieldset>
+
+		</form>
+		<?php
+		if (isset($erreur)) echo '<p class="avertissement">',$erreur, '</p>';
+		?>
+	</div>
+</main>

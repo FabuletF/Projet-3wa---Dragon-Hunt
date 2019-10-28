@@ -1,0 +1,291 @@
+/* partie commune */
+* {
+	box-sizing: border-box;
+	outline: none;
+}
+
+header{
+	background-color : MediumBlue ;
+	color : Gold;
+	text-align:center;
+	padding : 1%;
+}
+
+
+div {
+	font-size: 20px;
+}
+
+p {
+	color : blue;
+	margin : 0 2%;
+	padding : 1px 5px;
+	line-height : 30px;
+}
+h1 {
+	text-align : center;
+}
+h2 {
+	font-weight : bolder;
+	margin-left : 15px
+}
+
+.elts_form {
+	display: flex;
+	flex-direction : column;
+	padding-right: 30px;
+
+}
+
+label {
+	margin-bottom:20px;
+}
+
+input {
+	margin-bottom:20px;
+}
+
+.nextButton {
+	width : auto;
+	padding: 10px;
+	margin-top: 10px;
+	font-weight : bold;
+	background-color: aliceblue;
+}
+
+
+.nextButton:hover {
+	transform: scale(1.5) translateY(10px);
+	box-shadow:0px 0px 25px 0px rgba(0,0,0,0.7) inset;
+}
+
+/* partie présentation */
+
+.accolade {
+	border : 3px inset black;
+	border-radius : 20px;
+	margin : 0 2%;
+	padding : 1px 5px;
+}
+.a_ouvrante {
+	border-bottom-style : hidden;
+	margin-top : 5%
+}
+
+.accolade li {
+	list-style-type: none;
+	margin-bottom:15px;
+}
+.a_fermante {
+	border-top-style : hidden;
+}
+
+.visuel {
+	background-image: url(../images/large_dragon_volant.png);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 850px;
+	border:none;
+}
+
+
+.onlyButton {
+	position : relative;
+	left : 40%;
+	top : 20px;
+	font-size: 2em;
+}
+
+/* partie connexion/inscription */
+
+
+.blocInscrCnx {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+}
+
+.monFormulaire {
+	background-color: grey;
+	width: auto;
+	box-shadow :
+	0 /* décalage en x */
+	0 /* décalage en y */
+	30px /* flou = blurr */
+	10px /*étalement = spread */
+	rgba(0,0,0,0,0.35) ; /* couleur */
+
+}
+
+.degrade {
+	background-image:radial-gradient(MediumBlue, white);
+	background-image:-moz-radial-gradient(MediumBlue, white);
+	background-image:-webkit-radial-gradient(MediumBlue, white);
+	background-image:-o-radial-gradient(MediumBlue, white);
+}
+
+.champs_form {
+	list-style:none;
+}
+
+.monFormulaire label {
+	color : MediumSpringGreen;
+}
+
+.monFormulaire legend {
+	font-weight:bold;
+	font-style: italic;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.formButton {
+	border-radius: 12px;
+}
+
+.boutons_choix button {
+	margin-left: 25px;
+}
+
+.sousForm {
+	font-size: 30px;
+
+}
+
+.avertissement {
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 30px;
+	font-size:1.5em;
+	font-weight: bold;
+	font-style: italic;
+	color:red;
+}
+
+
+/* partie jeu */
+/*________________________________________________________________________*/
+
+section {
+	display: flex;
+	flex-direction : row;
+	justify-content :space-around;
+	flex-wrap: wrap;
+}
+
+.affich_jeu {
+	margin-top : 1%;
+	height: fit-content;
+	width : 17%;
+	left: 5%;
+	margin-top : 1%;
+	border-style : outset;
+	border-width : 3px;
+}
+
+.pt_vie{
+	color : #0000CC;
+	border-color : blue;
+}
+p#KHP{
+	color : #0000CC;
+}
+
+p#Gold {
+	color:#DD0000;
+}
+
+.image_descri {
+	border: none;
+	width:auto;
+}
+.argent{
+	color : #DD0000;
+	border-color : red;
+}
+
+.recit {
+	margin-top: 50px;
+	flex-direction: row-reverse;
+	align-items: initial;
+}
+
+#LogAction{
+	height : 100%;
+	padding : 0 0 4px;
+	border-style : groove;
+	border-width : 5px;
+	color : green;
+	width:80%;
+}
+
+.go_button {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	background-image:radial-gradient(white, LawnGreen);
+	background-image:-moz-radial-gradient(white, LawnGreen);
+	background-image:-webkit-radial-gradient(white, LawnGreen);
+	background-image:-o-radial-gradient(white, LawnGreen);
+	border:green;
+	border-style : ridge;
+	border-width : 3px;
+
+}
+
+.go_button:hover {
+	transform: scale(2) translateY(10px);
+	box-shadow:0px 0px 25px 0px rgba(0,0,0,0.7) inset;
+}
+
+.finaleP {
+	flex-direction: column;
+	align-items: center;
+}
+
+/* modifications pour mobile responsive */
+
+@media only screen and (max-width : 767px) {
+	/* contenu mobile */
+
+	/* pas de place pour le gros dragon, on réduit */
+	.visuel {
+		background-image: url(../images/mini_dragon_volant.png);
+		height: 350px;
+		border:none;
+	}
+
+	div {
+		font-size: 12px;
+	}
+
+	#log{
+		width:100%;
+	}
+
+
+}
+
+@media screen and (min-width : 767px) and (max-width : 1024px){
+
+	/* contenu tablette */
+	/* pas de place pour le gros dragon, on réduit à la version moyenne */
+	.visuel {
+		background-image: url(../images/moy_dragon_volant.png);
+		height: 600px;
+		border:none;
+	}
+	div {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width : 1024px) and (max-width : 1520px){
+	/* contenu ordi_mais ecran moyen */
+	/* pas de place pour le gros dragon, on réduit à la version moyenne */
+	.visuel {
+		background-image: url(../images/normal_dragon_volant.png);
+		height: 600px;
+		border:none;
+	}
+}
